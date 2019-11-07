@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    protected fun clk(view:View){
+     fun clkBu(view:View){
         val buSelected = view as Button
         var cellID =0
         when(buSelected.id){
