@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
      fun clkBu(view:View){
         val buSelected = view as Button
         var cellID =0
+        var player0 = 5
         when(buSelected.id){
             R.id.a1 -> cellID=1
             R.id.a2 -> cellID=2
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
          playGame(cellID,buSelected)
          checkWinner()
     }
+
     var player1 = ArrayList<Int>()
     var player2 = ArrayList<Int>()
     var activePlayer:Boolean=true
