@@ -88,6 +88,65 @@ class MainActivity : AppCompatActivity() {
         if(won!=-1)Toast.makeText(this,"Player $won has won the Game!",Toast.LENGTH_LONG).show()
 
     }
+
+    fun checkWinner(){
+        var won=-1
+        //row1
+        if(player1.contains(1)&&player1.contains(2)&&player1.contains(3))won=1
+        if(player2.contains(1)&&player2.contains(2)&&player2.contains(3))won=2
+        //row2
+        if(player1.contains(4)&&player1.contains(5)&&player1.contains(6))won=1
+        if(player2.contains(4)&&player2.contains(5)&&player2.contains(6))won=2
+        //row3
+        if(player1.contains(7)&&player1.contains(8)&&player1.contains(9))won=1
+        if(player2.contains(7)&&player2.contains(8)&&player2.contains(9))won=2
+        //col1
+        if(player1.contains(1)&&player1.contains(4)&&player1.contains(7))won=1
+        if(player2.contains(1)&&player2.contains(4)&&player2.contains(7))won=2
+        //col2
+        if(player1.contains(2)&&player1.contains(5)&&player1.contains(8))won=1
+        if(player2.contains(2)&&player2.contains(5)&&player2.contains(8))won=2
+        //col3
+        if(player1.contains(3)&&player1.contains(6)&&player1.contains(9))won=1
+        if(player2.contains(3)&&player2.contains(6)&&player2.contains(9))won=2
+        //diag1
+        if(player1.contains(1)&&player1.contains(5)&&player1.contains(9))won=1
+        if(player2.contains(1)&&player2.contains(5)&&player2.contains(9))won=2
+        //diag2
+        if(player1.contains(3)&&player1.contains(5)&&player1.contains(7))won=1
+        if(player2.contains(3)&&player2.contains(5)&&player2.contains(7))won=2
+        if(won!=-1)Toast.makeText(this,"Player $won has won the Game!",Toast.LENGTH_LONG).show()
+
+    }
+    fun checkWinner(){
+        var won=-1
+        //row1
+        if(player1.contains(1)&&player1.contains(2)&&player1.contains(3))won=1
+        if(player2.contains(1)&&player2.contains(2)&&player2.contains(3))won=2
+        //row2
+        if(player1.contains(4)&&player1.contains(5)&&player1.contains(6))won=1
+        if(player2.contains(4)&&player2.contains(5)&&player2.contains(6))won=2
+        //row3
+        if(player1.contains(7)&&player1.contains(8)&&player1.contains(9))won=1
+        if(player2.contains(7)&&player2.contains(8)&&player2.contains(9))won=2
+        //col1
+        if(player1.contains(1)&&player1.contains(4)&&player1.contains(7))won=1
+        if(player2.contains(1)&&player2.contains(4)&&player2.contains(7))won=2
+        //col2
+        if(player1.contains(2)&&player1.contains(5)&&player1.contains(8))won=1
+        if(player2.contains(2)&&player2.contains(5)&&player2.contains(8))won=2
+        //col3
+        if(player1.contains(3)&&player1.contains(6)&&player1.contains(9))won=1
+        if(player2.contains(3)&&player2.contains(6)&&player2.contains(9))won=2
+        //diag1
+        if(player1.contains(1)&&player1.contains(5)&&player1.contains(9))won=1
+        if(player2.contains(1)&&player2.contains(5)&&player2.contains(9))won=2
+        //diag2
+        if(player1.contains(3)&&player1.contains(5)&&player1.contains(7))won=1
+        if(player2.contains(3)&&player2.contains(5)&&player2.contains(7))won=2
+        if(won!=-1)Toast.makeText(this,"Player $won has won the Game!",Toast.LENGTH_LONG).show()
+
+    }
     fun autoPlay(){
         var emptyCells = ArrayList<Int>()
         for(cellID in 1..9)if (!(player1.contains(cellID)||player2.contains(cellID)))emptyCells.add(cellID)
