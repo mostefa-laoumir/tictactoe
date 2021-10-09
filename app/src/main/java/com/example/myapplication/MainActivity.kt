@@ -149,8 +149,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun autoPlay(){
         var emptyCells = ArrayList<Int>()
-        var emptyCells = ArrayList<Int>()
-        var emptyCells = ArrayList<Int>()
+   
         for(cellID in 1..9)if (!(player1.contains(cellID)||player2.contains(cellID)))emptyCells.add(cellID)
         var r= Random()
         val randIndex = r.nextInt(emptyCells.size-0)+0
